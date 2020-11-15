@@ -17,7 +17,7 @@
     [
         {
 		"matches": ["https://wk.baidu.com/*","https://wenku.baidu.com/*"], 
-		"js": ["js/jquery-3.5.1.js","js/content-script.js"],
+		"js": ["js/jquery-3.5.1.js","js/clipboard.min.js","js/content-script.js"],
 		"run_at": "document_end"
         }
     ],

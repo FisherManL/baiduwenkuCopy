@@ -17,17 +17,22 @@ var Copy = function()
 	text = text.replace(/来自.*百度/i,"");
 	text = text.replace(/来自.*{display: none; font-size: 12px;}/i,"");
 	text = text.replace(/\n文库/i,"");
+	text = text.replace(" ","");
 	//展示
-	text = '<p style="font-size:15px; text-align:center;"><a href="https://github.com/JerwinLiao/baiduwenkuCopy">***Made By hjliao***</a><hr><button id="updateText" style="font-size:15px;display:block;margin:0 auto;">更新文本</button><hr>'+text+'</p>'
+	text = '<p style="font-size:15px; text-align:center;"><a href="https://github.com/JerwinLiao/baiduwenkuCopy">***Made By hjliao***</a><hr><div style="text-align:center;"><button id="updateText" style="font-size:15px;margin:0 auto;">更新文本</button>'+
+'<button id="copyText" style="font-size:15px;margin-left:10px;" data-clipboard-action="copy" data-clipboard-target="#docText">复制文本</button></div><hr><div id="docText">'+text+'</div></p>'
 	$("#right-wrapper-id").html(text);
 	// console.log(text);
+	new ClipboardJS('#copyText');
 }
+
 var SetButtonClick = function()
 {
 	$("#updateText").on("click",function(){
 		Copy();
 	});
 }
+
 $.when( $.ready ).then(function() {
 	console.log("插件运行");
 	Copy();
