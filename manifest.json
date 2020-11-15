@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "author": "hj-liao",
+    "version": "1.0",
+    "icons":{
+        "128":"icon.png"
+    },
+    "description": "百度文库解除复制限制",
+    "name": "百度文库复制",
+    "short_name": "ad_banner",
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "ad_banner",
+      "default_popup": "popup.html"
+    },
+    "content_scripts":
+    [
+        {
+		"matches": ["https://wk.baidu.com/*","https://wenku.baidu.com/*"], 
+		"js": ["js/jquery-3.5.1.js","js/content-script.js"],
+		"run_at": "document_start"
+        }
+    ],
+    "permissions":
+    [   
+        "tabs",
+        "http://*/*", 
+        "https://*/*" 
+    ]
+}
