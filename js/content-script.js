@@ -20,7 +20,7 @@ var Copy = function()
 	//展示
 	text = '<p style="font-size:15px; text-align:center;"><a href="https://github.com/JerwinLiao/baiduwenkuCopy">***Made By hjliao***</a><hr><button id="updateText" style="font-size:15px;display:block;margin:0 auto;">更新文本</button><hr>'+text+'</p>'
 	$("#right-wrapper-id").html(text);
-	console.log(text);
+	// console.log(text);
 }
 var SetButtonClick = function()
 {
