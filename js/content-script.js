@@ -23,7 +23,7 @@ var Copy = function()
 '<button id="copyText" style="font-size:15px;margin-left:10px;" data-clipboard-action="copy" data-clipboard-target="#docText">复制文本</button></div><hr><div id="docText">'+text+'</div></p>'
 	$("#right-wrapper-id").html(text);
 	// console.log(text);
-	new ClipboardJS('#copyText');
+	
 }
 
 var SetButtonClick = function()
@@ -37,4 +37,5 @@ $.when( $.ready ).then(function() {
 	console.log("插件运行");
 	Copy();
 	SetButtonClick();
+	new ClipboardJS('#copyText');
 });
